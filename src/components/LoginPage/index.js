@@ -2,21 +2,22 @@ import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 import {Container,StyledLink, Title, Input} from './style';
+import TokenContext from '../../contexts/TokenContext';
 
 export default function LoginPage(){
-
+    const { setToken } = useContext(TokenContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     function handleLogin(e) {
          e.preventDefault();
-         const promise = axios.post("http://localhost:5000/login", {
+         const promise = axios.post("http://localhost:5000/sign-in", {
          email,
          password
          });
     
          promise.then(response => {
-           //setAndPersistToken(response.data.token);
+           setToken(response.data.token);
            navigate('/historico')
          });
          promise.catch(error => {
