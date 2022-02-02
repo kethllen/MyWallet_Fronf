@@ -18,10 +18,12 @@ export default function LoginPage(){
     
          promise.then(response => {
            setToken(response.data.token);
-           navigate('/historico')
+           alert("vc logou")
+           //navigate('/historico')
          });
          promise.catch(error => {
          alert(error.response.data.message)
+         console.log(error.response)
              setEmail('');
              setPassword('');
         });
@@ -37,7 +39,7 @@ export default function LoginPage(){
                 <button type="submit">Entrar</button>
                 </Input>
             </form>
-            <StyledLink to="/cadastro">Primeira vez? Cadastre-se!</StyledLink>
+            <StyledLink to="/sing-up">Primeira vez? Cadastre-se!</StyledLink>
         </Container>       
     );
 }

@@ -2,10 +2,8 @@ import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
 import {Container,StyledLink, Title, Input} from './style';
-import TokenContext from '../../contexts/TokenContext';
 
 export default function SingUpPage(){
-    const { setToken } = useContext(TokenContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
@@ -16,6 +14,7 @@ export default function SingUpPage(){
          if(password !== confirmPassword){
             alert("As senhas não coincidem");
          }else{
+            console.log("vou fazer a requisicao")
             const promise = axios.post("http://localhost:5000/sign-up", {
                 name,
                 email,
