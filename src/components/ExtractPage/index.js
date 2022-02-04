@@ -54,7 +54,12 @@ export default function ExtractPage() {
     <Container>
       <Title>
         <h1>Olá, {nameContext}</h1>
-        <img src={exit}></img>
+        <img
+          src={exit}
+          onClick={() => {
+            navigate("/");
+          }}
+        ></img>
       </Title>
       <Extrat>
         {!extrato ? (
