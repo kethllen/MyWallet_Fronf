@@ -14,6 +14,7 @@ export default function SingUpPage(){
          if(password !== confirmPassword){
             alert("As senhas não coincidem");
          }else{
+             console.log("entrei no else");
             const promise = axios.post("http://localhost:5000/sign-up", {
                 name,
                 email,
@@ -21,10 +22,11 @@ export default function SingUpPage(){
                 });
            
                 promise.then(response => {
+                    console.log("cadastrei");
                   navigate('/')
                 });
                 promise.catch(error => {
-                alert(error.response.data.message)
+                    console.log(error.response.data.message)
                     setName('');
                     setEmail('');
                     setPassword('');
