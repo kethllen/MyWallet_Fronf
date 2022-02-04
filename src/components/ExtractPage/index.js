@@ -42,14 +42,14 @@ export default function ExtractPage() {
   }, []);
   if (extrato) {
     extrato.forEach((element) => {
-      element.value = element.value.replace(",", ".");
-      if (element.type === "entrada") total += parseFloat(element.value);
-      else total -= parseFloat(element.value);
+      const aux = element.value.replace(",", ".");
+      if (element.type === "entrada") total += parseFloat(aux);
+      else total -= parseFloat(aux);
     });
-    console.log(total);
   }
-
-  if (token == "") return;
+  total = total.toFixed(2);
+  const totalaux = total.replace(".", ",");
+  if (token === "") return;
   return (
     <Container>
       <Title>
@@ -82,7 +82,7 @@ export default function ExtractPage() {
         ) : (
           <Saldo color={total >= 0 ? "entrada" : "saida"}>
             <span>Saldo</span>
-            <div className="value">{total.toFixed(2)}</div>
+            <div className="value">{totalaux}</div>
           </Saldo>
         )}
       </Extrat>
