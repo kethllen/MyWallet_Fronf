@@ -31,7 +31,10 @@ export default function ExtractPage() {
   };
   useEffect(() => {
     console.log(token);
-    const promise = axios.get("http://localhost:5000/extract", config);
+    const promise = axios.get(
+      "https://git.heroku.com/api-my--wallet.git/extract",
+      config
+    );
     promise.then((response) => {
       console.log(response.data);
       setExtrato(response.data);

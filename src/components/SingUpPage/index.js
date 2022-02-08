@@ -15,12 +15,14 @@ export default function SingUpPage() {
       alert("As senhas não coincidem");
       return;
     } else {
-      console.log("entrei no else");
-      const promise = axios.post("http://localhost:5000/sign-up", {
-        name,
-        email,
-        password,
-      });
+      const promise = axios.post(
+        "https://git.heroku.com/api-my--wallet.git/sign-up",
+        {
+          name,
+          email,
+          password,
+        }
+      );
 
       promise.then((response) => {
         console.log("cadastrei");
