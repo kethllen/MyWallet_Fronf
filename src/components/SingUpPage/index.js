@@ -16,7 +16,7 @@ export default function SingUpPage() {
       return;
     } else {
       const promise = axios.post(
-        "https://git.heroku.com/api-my--wallet.git/sign-up",
+        "https://api-my--wallet.herokuapp.com/sign-up",
         {
           name,
           email,

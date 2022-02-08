@@ -32,7 +32,7 @@ export default function ExtractPage() {
   useEffect(() => {
     console.log(token);
     const promise = axios.get(
-      "https://git.heroku.com/api-my--wallet.git/extract",
+      "https://api-my--wallet.herokuapp.com/extract",
       config
     );
     promise.then((response) => {

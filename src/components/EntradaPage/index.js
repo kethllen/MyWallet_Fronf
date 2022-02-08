@@ -17,7 +17,7 @@ export default function EntradaPage() {
   function handleEntrada(e) {
     e.preventDefault();
     const promise = axios.post(
-      "https://git.heroku.com/api-my--wallet.git/extract",
+      "https://api-my--wallet.herokuapp.com/extract",
       {
         value,
         description,
