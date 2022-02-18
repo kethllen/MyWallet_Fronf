@@ -2,7 +2,7 @@
 
 The myWallet app is here to help you control your expenses, to avoid surprises at the end of the month!
 
-<img src="/assets/my-wallet.gif" />
+<img src="src/assets/my-wallet.gif" />
 
 Try it out now at https://my-wallet-fronf.vercel.app/
 
