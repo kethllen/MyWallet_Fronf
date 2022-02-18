@@ -2,6 +2,8 @@
 
 The myWallet app is here to help you control your expenses, to avoid surprises at the end of the month!
 
+<img src="/assets/my-wallet.gif" />
+
 Try it out now at https://my-wallet-fronf.vercel.app/
 
 ## About
@@ -31,26 +33,19 @@ The following tools and frameworks were used in the construction of the project:
 ## How to run
 
 1. Clone this repository
-2. Install front-end dependencies
+2. Clone the back-end repository at https://github.com/kethllen/My_Wallet_Back
+3. Follow instructions to run back-end at https://github.com/kethllen/My_Wallet_Back
+4. Install front-end dependencies
 ```bash
 npm i
 ```
-3.Clone the back-end repository that is available here https://github.com/kethllen/SweetDreams_back
-4. Install backend dependencies
-```bash
-npm i
-```
-5.Create an environment variables file in the project root (.env) and configure a variable with the name 'PORT' that receives the port you want to use, and another called 'MONGO_URI' with the url of the bank, Example:
-``
-MONGO_URI = mongodb://localhost/:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=ApiMyWallet
-PORT=5000
-``
-6. Run the back-end with
-```bash
-npm start or node app.js
-```
-7.Run the front-end with
+5. Run the front-end with
 ```bash
 npm start
 ```
+6. You can optionally build the project running
+```bash
+npm run build
+```
+7. Finally access http://localhost:3000 on your favorite browser.
 
